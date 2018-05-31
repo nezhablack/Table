@@ -195,6 +195,10 @@ input[type="radio"].visually-hidden {
     border-bottom: 3px solid #b60076;
 }
 
+.row-bottom {
+    border-bottom: 2px solid #f2d0e6;
+}
+
 td:hover {
     background-color: rgb(124, 179, 56);
     cursor: pointer;
@@ -268,9 +272,6 @@ tr:hover, tr:hover th {
     line-height: 25px;
     text-transform: uppercase;
     vertical-align: middle;
-}
-
-.row-border .table-cell {
 }
 
 
