@@ -13,228 +13,257 @@
     </header>
 
     <main>
-        <section class="table">
-            <table class="technology">
-                <tr class="technology-heading">
-                    <th colspan="2">Redux</th>
-                    <th>Название</th>
-                    <th>Положительное</th>
-                    <th>Отрицательное</th>
-                    <th>Оценки &laquo;за&raquo;</th>
-                    <th>Оценки &laquo;против&raquo;</th>
-                </tr>
-                <tr>
-                    <td>актуализация: 2018.05.26</td>
-                    <td>пункт</td>
-                    <td>свойства</td>
-                    <td colspan="2">комментарии</td>
-                    <td colspan="2">по десятибалльной шкале</td>
-                </tr>
-                <tr>
-                    <td rowspan="11">DX</td>
-                    <td>1.1</td>
-                    <td>Актуальность документации</td>
-                    <td>Документация на сам Redux всегда актуальна</td>
-                    <td>Нужно проверять у вспомогательных библиотек</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.2</td>
-                    <td>Описания API</td>
-                    <td>Полное и исчерпывающее для самого Redux</td>
-                    <td>Документация на сам Redux очень большая, так же стоит учитывать размер документации для вспомогательных пакетов (очень большая документация на redux-saga)</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.3</td>
-                    <td>Описание архитектурных подходов</td>
-                    <td>Есть туториал по самому паттерну и его описание</td>
-                    <td>Redux &mdash; это менеджер состояния + event machine, детальный обзор каждого из которых в документации с теоретической точки зрения не рассматривается, из-за чего начинающим разработчсикам может быть тяжело в этом разобраться</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.4</td>
-                    <td>Порог входа</td>
-                    <td>Сам Redux очень простой и его изучить вместе с реализацией можно за несколько дней просто изучив исходный код</td>
-                    <td>Порог входа в &laquo;тюнингованный&raquo; редакс может быть значительно выше чем в &laquo;чистый&raquo;, это может создать трудности уже не на этапе выбора фреймворка, а в процессе работы над бизнес задачами</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.5</td>
-                    <td>Возможности интеграции с другими библиотеками и фреймворками</td>
-                    <td>Полностью framework-agnostic &mdash; легко  идет в связке любым фреймвокром или технологией</td>
-                    <td>Добавляет</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.6</td>
-                    <td>Наличие примеров: в документации / интерактивных (codesandbox) / в проектах (TODO / Real World)</td>
-                    <td>примеров очень много(даже в самой документации), есть полноценные опенсорс приложения написаные на редаксе</td>
-                    <td>Нет единого best practice, многие популярные примеры расходятся в каких-то концепциях</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.7</td>
-                    <td>Величина API (количество методов), сложность (концептуально)</td>
-                    <td>Минимальный набор методов АПИ, основанных на своих конценптуальных особенностях, но очень простых </td>
-                    <td>Величина API может увеличиваться бесконечно с добавлением вспомагательных библиотеках</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.8</td>
-                    <td>Уровень абстракции API, замкнутость на библиотеку \ архитектуру</td>
-                    <td>АПИ выдержано в единой логике и задает определенную архитектуру</td>
-                    <td>Обязательность иммутабельных данных</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.9</td>
-                    <td>Средства дебага (logging, devTools)</td>
-                    <td>Отличные девтулзы, в которых можно отслеживать экшены, какие изменения они произвели и самое главное - time-traveling, можно возвращаться в любую прошлую точку состония хранилища</td>
-                    <td>Дебаггер тормозит на больших данных</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.10</td>
-                    <td>Возможности тестирования (юнит, интеграционное)</td>
-                    <td>Управление состоянием при работе с редаксом абсолютно изолированное, что дает возможность удобно тестировать любые взаимодействия с хранилищем и связанную с ним бизнес-логику отдельно от вью. Из-за простых абстракций можно использовать любые тулзы для тестирования. Т.к сами редюсеры декомпозируются как маленькие независимые состояния, все они тоже могут тестироваться отдельно друг от друга, без необходимости мокать лишние данные.</td>
-                    <td>Нужно проверять у вспомогательных библиотек</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>1.11</td>
-                    <td>Типизация (TS, flow, JSDoc)</td>
-                    <td>Редакс полность типизирован и может использоваться в любой существующей типипизрованной тулзе</td>
-                    <td>Нужно проверять у вспомогательных библиотек</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td rowspan="6">Support</td>
-                    <td>2.1</td>
-                    <td>Версионность (LTS)</td>
-                    <td>&mdash;</td>
-                    <td>Нужно проверять у вспомогательных библиотек</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2.2</td>
-                    <td>Популярность (stars, PR, issue)</td>
-                    <td>41k</td>
-                    <td>Hype driven development</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2.3</td>
-                    <td>Забагованность (относительно открытых и закрытых: issue с багами / все issue)</td>
-                    <td>22 открытых/1456 закрытых на текущий момент нету багов</td>
-                    <td>Нужно проверять у вспомогательных библиотек</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2.4</td>
-                    <td>Покрытие тестами</td>
-                    <td>Покрыто</td>
-                    <td>Нужно проверять у вспомогательных библиотек</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2.5</td>
-                    <td>Поддерживаемые браузеры</td>
-                    <td>Подавляющее большинство</td>
-                    <td>не поддерживает ie8-, так же могут не поддерживаться дополнительные библиотеки или их траспиляция будет уменьшать производительность (как в случае с генераторами)</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2.6</td>
-                    <td>Наличие платной поддержки</td>
-                    <td>Поддерживается</td>
-                    <td>&mdash;</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">Platform</td>
-                    <td>3.1</td>
-                    <td>web (desktop и mobile)</td>
-                    <td>Поддерживается</td>
-                    <td>&mdash;</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>3.2</td>
-                    <td>mobile (native)</td>
-                    <td>Поддерживается</td>
-                    <td>из-за имутабельности - пересоздании объектов и из-за глобальной подписки - необходимости использовать селекторы с мемоизацией, производительность редакста, при быстрых обновлениях, может быть удручающей на малопроизводительных устройствах</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>3.3</td>
-                    <td>desktop (native)</td>
-                    <td>Поддерживается</td>
-                    <td>&mdash;</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>3.4</td>
-                    <td>server</td>
-                    <td>Поддерживается</td>
-                    <td>имеет смысл только для ssr</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>SEO</td>
-                    <td>4.1</td>
-                    <td>SSR</td>
-                    <td>Позволяет сериализовать состояние, чтобы прокинуть его на фротенд</td>
-                    <td>требует разработки собственного решения </td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Alternative</td>
-                    <td>5.1</td>
-                    <td>Технологические альтернативы (прямые конкуренты)</td>
-                    <td colspan="2">Mobx, Cerebral, rematch, ngrx</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>5.2</td>
-                    <td>Концептуальные альтернативы (другие подходы к решению проблемы)</td>
-                    <td colspan="2">focal, Rx, effector	</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>Summary</td>
-                    <td>6.1</td>
-                    <td>Где лучше применять - тип проекта: landing / SPA / enterprise web-app / server</td>
-                    <td>Лучше всего на проектах среднего размера. На маленьких проектах при долгой поддержки и на больших проектах, при разбиении его на маленькие</td>
-                    <td>Лучше не применять в приложениях с большим количеством или большой скоростью обновлений (игры, дашборды статистики, чаты)</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>                  
-            </table>
+        <section class="search">
+            <div class="container">
+                <span class="search-direction">Найти</span>
+                <form class="user-search" action="#" method="get">
+                    <label for="search" class="visually-hidden">Поиск по сайту</label>
+                    <input class="search-field" type="search" name="search-field" id="search" value="" placeholder="redux" required pattern=".+">
+                    <button class="visually-hidden" type="submit">Найти</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <div class="container">
+                <table class="technology-table">
+                    <tr class="technology-row table-additional-row">
+                        <td class="table-cell table-additional-info" colspan="7">актуализация: 2018.05.26</td>
+                    </tr>
+                    <tr class="technology-heading">
+                        <th class="table-cell table-name" colspan="2">Redux</th>
+                        <th class="table-cell table-title">Название свойства</th>
+                        <th class="table-cell table-title">Положительное</th>
+                        <th class="table-cell table-title">Отрицательное</th>
+                        <th class="table-cell table-title table-rate">Оценки &laquo;за&raquo;</th>
+                        <th class="table-cell table-title table-rate">Оценки &laquo;против&raquo;</th>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell table-cell-1 table-left-col" rowspan="11">DX</td>
+                        <td class="table-cell table-cell-2">1.1</td>
+                        <td class="table-cell table-cell-3">Актуальность документации</td>
+                        <td class="table-cell table-cell-4">Документация на сам Redux всегда актуальна</td>
+                        <td class="table-cell table-cell-5">Нужно проверять у вспомогательных библиотек</td>
+                        <td class="table-cell table-cell-6">0</td>
+                        <td class="table-cell table-cell-7">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.2</td>
+                        <td class="table-cell">Описания API</td>
+                        <td class="table-cell">Полное и исчерпывающее для самого Redux</td>
+                        <td class="table-cell">Документация на сам Redux очень большая, так же стоит учитывать размер документации для вспомогательных
+                            пакетов (очень большая документация на redux-saga)</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.3</td>
+                        <td class="table-cell">Описание архитектурных подходов</td>
+                        <td class="table-cell">Есть туториал по самому паттерну и его описание</td>
+                        <td class="table-cell" Redux &mdash; это менеджер состояния + event machine, детальный обзор каждого из которых в документации
+                            с теоретической точки зрения не рассматривается, из-за чего начинающим разработчсикам может быть
+                            тяжело в этом разобраться</td>
+                            <td class="table-cell">0</td>
+                            <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.4</td>
+                        <td class="table-cell">Порог входа</td>
+                        <td class="table-cell">Сам Redux очень простой и его изучить вместе с реализацией можно за несколько дней просто изучив
+                            исходный код</td>
+                        <td class="table-cell">Порог входа в &laquo;тюнингованный&raquo; редакс может быть значительно выше чем в &laquo;чистый&raquo;,
+                            это может создать трудности уже не на этапе выбора фреймворка, а в процессе работы над бизнес
+                            задачами
+                        </td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.5</td>
+                        <td class="table-cell">Возможности интеграции с другими библиотеками и фреймворками</td>
+                        <td class="table-cell">Полностью framework-agnostic &mdash; легко идет в связке любым фреймвокром или технологией</td>
+                        <td class="table-cell">Добавляет</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.6</td>
+                        <td class="table-cell">Наличие примеров: в документации / интерактивных (codesandbox) / в проектах (TODO / Real World)</td>
+                        <td class="table-cell">примеров очень много(даже в самой документации), есть полноценные опенсорс приложения написаные на
+                            редаксе
+                        </td>
+                        <td class="table-cell">Нет единого best practice, многие популярные примеры расходятся в каких-то концепциях</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.7</td>
+                        <td class="table-cell">Величина API (количество методов), сложность (концептуально)</td>
+                        <td class="table-cell">Минимальный набор методов АПИ, основанных на своих конценптуальных особенностях, но очень простых
+                        </td>
+                        <td class="table-cell">Величина API может увеличиваться бесконечно с добавлением вспомагательных библиотеках</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.8</td>
+                        <td class="table-cell">Уровень абстракции API, замкнутость на библиотеку \ архитектуру</td>
+                        <td class="table-cell">АПИ выдержано в единой логике и задает определенную архитектуру</td>
+                        <td class="table-cell">Обязательность иммутабельных данных</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.9</td>
+                        <td class="table-cell">Средства дебага (logging, devTools)</td>
+                        <td class="table-cell">Отличные девтулзы, в которых можно отслеживать экшены, какие изменения они произвели и самое главное
+                            - time-traveling, можно возвращаться в любую прошлую точку состония хранилища</td>
+                        <td class="table-cell">Дебаггер тормозит на больших данных</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">1.10</td>
+                        <td class="table-cell">Возможности тестирования (юнит, интеграционное)</td>
+                        <td class="table-cell">Управление состоянием при работе с редаксом абсолютно изолированное, что дает возможность удобно
+                            тестировать любые взаимодействия с хранилищем и связанную с ним бизнес-логику отдельно от вью.
+                            Из-за простых абстракций можно использовать любые тулзы для тестирования. Т.к сами редюсеры декомпозируются
+                            как маленькие независимые состояния, все они тоже могут тестироваться отдельно друг от друга,
+                            без необходимости мокать лишние данные.</td>
+                        <td class="table-cell">Нужно проверять у вспомогательных библиотек</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row row-border">
+                        <td class="table-cell">1.11</td>
+                        <td class="table-cell">Типизация (TS, flow, JSDoc)</td>
+                        <td class="table-cell">Редакс полность типизирован и может использоваться в любой существующей типипизрованной тулзе</td>
+                        <td class="table-cell">Нужно проверять у вспомогательных библиотек</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell table-left-col" rowspan="6">Support</td>
+                        <td class="table-cell">2.1</td>
+                        <td class="table-cell">Версионность (LTS)</td>
+                        <td class="table-cell">&mdash;</td>
+                        <td class="table-cell">Нужно проверять у вспомогательных библиотек</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">2.2</td>
+                        <td class="table-cell">Популярность (stars, PR, issue)</td>
+                        <td class="table-cell">41k</td>
+                        <td class="table-cell">Hype driven development</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">2.3</td>
+                        <td class="table-cell">Забагованность (относительно открытых и закрытых: issue с багами / все issue)</td>
+                        <td class="table-cell">22 открытых/1456 закрытых на текущий момент нету багов</td>
+                        <td class="table-cell">Нужно проверять у вспомогательных библиотек</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">2.4</td>
+                        <td class="table-cell">Покрытие тестами</td>
+                        <td class="table-cell">Покрыто</td>
+                        <td class="table-cell">Нужно проверять у вспомогательных библиотек</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">2.5</td>
+                        <td class="table-cell">Поддерживаемые браузеры</td>
+                        <td class="table-cell">Подавляющее большинство</td>
+                        <td class="table-cell">не поддерживает ie8-, так же могут не поддерживаться дополнительные библиотеки или их траспиляция
+                            будет уменьшать производительность (как в случае с генераторами)</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row row-border">
+                        <td class="table-cell">2.6</td>
+                        <td class="table-cell">Наличие платной поддержки</td>
+                        <td class="table-cell">Поддерживается</td>
+                        <td class="table-cell">&mdash;</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell table-left-col" rowspan="4">Platform</td>
+                        <td class="table-cell">3.1</td>
+                        <td class="table-cell">web (desktop и mobile)</td>
+                        <td class="table-cell">Поддерживается</td>
+                        <td class="table-cell">&mdash;</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">3.2</td>
+                        <td class="table-cell">mobile (native)</td>
+                        <td class="table-cell">Поддерживается</td>
+                        <td class="table-cell">из-за имутабельности - пересоздании объектов и из-за глобальной подписки - необходимости использовать
+                            селекторы с мемоизацией, производительность редакста, при быстрых обновлениях, может быть удручающей
+                            на малопроизводительных устройствах</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell">3.3</td>
+                        <td class="table-cell">desktop (native)</td>
+                        <td class="table-cell">Поддерживается</td>
+                        <td class="table-cell">&mdash;</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row row-border">
+                        <td class="table-cell">3.4</td>
+                        <td class="table-cell">server</td>
+                        <td class="table-cell">Поддерживается</td>
+                        <td class="table-cell">имеет смысл только для ssr</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row row-border">
+                        <td class="table-cell table-left-col">SEO</td>
+                        <td class="table-cell">4.1</td>
+                        <td class="table-cell">SSR</td>
+                        <td class="table-cell">Позволяет сериализовать состояние, чтобы прокинуть его на фротенд</td>
+                        <td class="table-cell">требует разработки собственного решения </td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell table-left-col" rowspan="2">Alternative</td>
+                        <td class="table-cell">5.1</td>
+                        <td class="table-cell">Технологические альтернативы (прямые конкуренты)</td>
+                        <td class="table-cell" colspan="2">Mobx, Cerebral, rematch, ngrx</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row row-border">
+                        <td class="table-cell">5.2</td>
+                        <td class="table-cell">Концептуальные альтернативы (другие подходы к решению проблемы)</td>
+                        <td class="table-cell" colspan="2">focal, Rx, effector </td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                    <tr class="technology-row">
+                        <td class="table-cell table-left-col">Summary</td>
+                        <td class="table-cell">6.1</td>
+                        <td class="table-cell">Где лучше применять - тип проекта: landing / SPA / enterprise web-app / server</td>
+                        <td class="table-cell">Лучше всего на проектах среднего размера. На маленьких проектах при долгой поддержки и на больших
+                            проектах, при разбиении его на маленькие</td>
+                        <td class="table-cell">Лучше не применять в приложениях с большим количеством или большой скоростью обновлений (игры, дашборды
+                            статистики, чаты)</td>
+                        <td class="table-cell">0</td>
+                        <td class="table-cell">0</td>
+                    </tr>
+                </table>
+            </div>
         </section>
 
     </main>

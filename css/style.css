@@ -1,28 +1,282 @@
+@font-face {
+    font-family: "Gilroy";
+    src:
+        local("Gilroy"),
+        url("../fonts/web/gilroyextrabold.woff2") format("woff2"),
+        url("../fonts/web/gilroyextrabold.woff") format("woff"),
+        url('../fonts/gilroy/Gilroyextrabold.ttf') format("ttf");
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src:
+        local(Gilroy),
+        url("../fonts/web/gilroylight.woff2") format("woff2"),
+        url("../fonts/web/gilroylight.woff") format("woff"),
+        url('../fonts/gilroy/Gilroylight.ttf') format("ttf");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src:
+        local("OpenSans"),
+        url("../fonts/web/opensanslight.woff2") format("woff2"),
+        url("../fonts/web/opensanslight.woff") format("woff"),
+        url("../fonts/open_sans/OpenSans-Light.ttf") format("ttf");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src:
+        local("OpenSans"),
+        url("../fonts/web/opensans.woff2") format("woff2"),
+        url("../fonts/web/opensans.woff") format("woff"),
+        url("../fonts/open_sans/OpenSans-Regular.ttf") format("ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
 body {
-    min-width: 1060px;
+    min-width: 1370px;
     margin: 0;
     padding: 0;
+    font-family: "OpenSans", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-family: "Arial", sans-serif;
-    background-color: #6d86aa;
+    background-color: #eee;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+                      linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
 }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 
 .container {
-    width: 1040px;
+    width: 1220px;
     margin: 0 auto;
+    background-color: #ece9f5;
 }
 
-table, 
-th, 
-td {
-    border: 1px dotted #fff;
+.search {
+    padding-top: 60px;
+    padding-bottom: 57px;
+}
+
+.search .container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    background-color: #270041;
+}
+
+.search-direction {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 0.2em;
+}
+
+.user-search {
+    width: 441px;
+    font-size: 0;
+}
+
+.search-field {
+    background-color: transparent;
+    border: none;
+    width: 450px;
+    height: 49px;
+    padding-left: 40px;
+    padding-bottom: 15px;
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+    background-position: 3px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.search-field::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search-field::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search-field:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search-field:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search-field:hover::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-field:hover::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-field:hover:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-field:hover:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-field:focus {
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
+
+.search-field[value=""]:valid {
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
+
+.table-section {
+    font-family: "OpenSans", Arial, sans-serif;
+}
+
+.table-section .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.technology-table {
+    width: 1170px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+}
+
+.technology-heading {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.technology-heading .table-cell {
+    border-bottom: 3px solid #b60076;
+}
+
+td:hover {
+    background-color: rgb(124, 179, 56);
+    cursor: pointer;
+}
+
+tr:hover, tr:hover th {
+    background-color: rgba(125, 207, 25, 0.3);
+}
+
+.table-additional-info {
+    font-family: "OpenSans", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #737275;
+}
+
+.table-name {
+    font-size: 30px;
+    background-color: #b60076;
+    color: #fff;
+}
+
+.table-cell {
+    padding: 5px;
+}
+
+.technology-row {
+    padding: 10px;
+    vertical-align: baseline;
+    font-family: "OpenSans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.table-cell-1 {
+    width: 120px;
+}
+
+.table-cell-2 {
+    width: 10px;
+}
+
+.table-cell-3 {
+    width: 100px;
+}
+
+.table-cell-4 {
+    width: 350px;
+}
+
+.table-cell-5 {
+    width: 350px;
+}
+
+.table-cell-6 {
+    width: 70px;
+}
+
+.table-cell-7 {
+    width: 70px;
+}
+
+.table-rate {
+    width: 20px;
+}
+
+.table-left-col {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.row-border .table-cell {
 }
 
 
-/* #6d86aa - blue
-   #626770 - grey
-   #e0a568 - peach
-   #b45203 - orange
-   #7a3512 - brown  */
+/* #b60076- pink
+   #5400a2 - purple
+   #270041 - dark-purple
+   #7cb338 - green
+   #7a0000 - dark-red  */
 
