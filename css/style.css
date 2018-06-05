@@ -168,13 +168,73 @@ input[type="radio"].visually-hidden {
     border-bottom: 2px solid #fff;
 }
 
-.table-section {
+.technology-name {
+    margin: 0 30px 20px;
+    padding: 0;
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 30px;
+}
+
+.technology-description {
+    width: 600px;
+    margin: 0;
+    margin-left: 30px;
+    padding: 0;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.4em;
+}
+
+audio {
+    display: block;
+    width: 600px;
+    margin: 20px 30px;
+}
+
+blockquote {
+    position: relative;
+    width: 550px;
+    margin: 0 70px 20px;
+    padding: 0;
+}
+
+blockquote::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: -35px;
+    background-image: url("../comma.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+cite {
+    font-style: normal;
+    font-size: 15px;
+}
+
+img {
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    width: 550px;
+    height: auto;
+}
+
+.table-section,
+.audio-section {
     font-family: "OpenSans", Arial, sans-serif;
 }
 
-.table-section .container {
+.table-section .container,
+.audio-section .container  {
+    position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #fff;
 }
 
 .technology-table {
